@@ -10,13 +10,13 @@ public class Asignatura {
 
     public Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
+        // el constructor que solo recibe un entero no existe.
+/*
         this(0);
+*/
     }
 
-    public Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
-    }
-
+    // esta duplicado el constructor
     public Asignatura(int codigoExterno,Tipo tipo) {
         this("Sin nombre", 0, codigoExterno,tipo);
     }
@@ -39,9 +39,7 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    public void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
+    // metodo cambiarDatos duplicado
 
     public void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
